@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        h1 { 
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 3em;
+            text-align: center; 
+            color: #3e3d3d;
+        }
+        .imgProfile { 
+            width: 20%;  
+            border-radius: 50%;
+            box-shadow: 15px 15px 10px hsla(0, 1%, 62%, 0.471);
+        }
+        .imgHobby { 
+            width: 20%;  
+            border-radius: 20%;
+            box-shadow: 15px 15px 10px hsla(0, 1%, 62%, 0.471);
+        }
+        .linkpage { 
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2em; 
+            text-align: center;
+        }
+        a {
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            box-shadow: 0 8px 16px 0 #37363633, 0 6px 20px 0 #0e0d0d30;
+            background-color: #d9b3d6;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 1em;
+            margin: 4px 2px;
+        }
+        #profile {
+            font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        }
+        #profile td {
+            border: 1px solid #ddd;
+            padding: 12px;
+        }
+        #profile th {
+            border: 1px solid #ddd;
+            border: 1px solid #de4cc1;
+            border-right: 3px solid #ec88d8;
+            text-shadow: 1px 1px 1px #ec88d8;
+            padding: 0px 10px;
+            background: -webkit-gradient( linear, left bottom, right top, color-stop(0.02, #ec88d8), color-stop(0.51, #ec88d8), color-stop(0.87, #ce37b0) );
+        }
+     table { width: 30%;}
+    </style>
+</head>
+<body>
+    <h1>My Profile</h1>
+    <p align="center">
+        <img class="imgProfile" src="./images/profile.jpeg" alt="Profile">
+    </p>
+    <table id="profile" align="center">
+        <tr>
+            <th>Name:</td>
+            <td>Kusuma</td>  
+        </tr>
+        <tr>
+            <th>Surname:</th>  
+            <td>Malaithong</td>  
+        </tr>
+        <tr>
+            <th>Nickname:</th>  
+            <td>Patt</td>  
+        </tr>
+        <tr>
+            <th>Domicile:</th>  
+            <td>Lampang</td>  
+        </tr>
+        <tr>
+            <th>Hobby:</th>  
+            <td >
+                <img class="imgHobby" src="./images/plant.png" alt="">
+                <img class="imgHobby" src="./images/read.png" alt="">
+                <img class="imgHobby" src="./images/listen.png" alt="">
+            </td>  
+        </tr>
+    </table>
+    <p class="linkpage">
+        <a href="./index.html">Homepage</a>
+        <a href="friends.html">Friends</a>
+    </p>
+</body>
+</html>

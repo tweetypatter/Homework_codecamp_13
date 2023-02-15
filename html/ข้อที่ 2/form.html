@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #000000;
+            list-style-type: none;
+        }
+        li {
+            float: left;
+        }
+        li a {
+            display: block;
+            background-color: #419ac4;
+            border-left: 1px solid #3886ab;
+            color: white;
+            padding: 15px 15px;
+            text-decoration: none;
+        }
+        .active {
+            color: #000000;
+            background-color: #ffffff;
+        }
+        div[class^="container"] {
+            margin: 30px 30px;
+            display: flex;
+        }
+        select:not(.currency), 
+        input:not(input[type="number"]):not(input[type="submit"])
+        {
+            color: #abadad;
+            width: 155px;
+            height:35px;
+            border: 1px solid #c5c7c7;
+            margin: 5px 5px 0px 0px;
+            text-align: center;
+        }
+        .to, .returning {
+            margin-left: 50px;
+        }
+        input[type="number"]{
+            color: #abadad;
+            width: 70px;
+            height: 35px;
+            margin: 5px 15px 0px 0px;
+            border: 1px solid #c5c7c7;
+            text-align: center;
+        }
+        .currency {
+            width: 97px;
+            height: 40px;
+            margin: 4px 0px;
+            color: #abadad;
+            text-align: center;
+        }
+        .textCurrency {
+            color: #e6653c;
+            padding: 15px 15px 15px 0px;
+        }
+        input[type="submit"] {
+            font-weight: bold;
+            color: #ffffff;
+            width: 100px;
+            height: 40px;
+            margin: 28px;
+            background-color: #e6653c;
+            border: none;
+            border-radius: 4px;
+        }
+        select {
+            border: 1px solid #c5c7c7;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="" class="active">Book Flight</a></li>
+        <li><a href="">Schedule</a></li>
+        <li><a href="">Ticket</a></li>
+        <li><a href="">Hotel</a></li>
+    </ul>
+    <form action="http://jkorpela.fi/cgi-bin/echo.cgi">
+        <div class="container">
+        <div class="from"><label for="from"><strong>Flying from</strong></label><br>
+            <select id="from" name="from">
+                <option value="pakistan">Pakistan</option>
+                <option value="bangkok">Bangkok</option>
+                <option value="chiangrai">Chiangrai</option>
+                <option value="pukhet">Pukhet</option>
+            </select>
+        </div>
+        <div class="to"><label for="to"><strong>To</strong></label><br>
+            <select id="to" name="to">
+                <option value="chiangrai">Chiangrai</option>
+                <option value="pakistan">Pakistan</option>
+                <option value="bangkok">Bangkok</option>
+                <option value="pukhet">Pukhet</option>
+            </select>
+        </div>
+    </div>
+    <div class="container">
+        <div class="departing">
+            <label for="departing"><strong>Departing</strong></label><br>
+            <input type="date" name="departing">
+        </div>
+        <div class="returning">
+            <label for="returning"><strong>Returning</strong></label><br>
+            <input type="date" name="returning">
+        </div>
+    </div>
+    <div class="container">
+        <div class="adult">
+            <label for="adult"><strong>Adult</strong></label><br>
+            <input type="number" name="Adult" min="0" max="10" value="1">
+        </div>
+        <div class="child">
+            <label for="child"><strong>Child</strong></label><br>
+            <input type="number" name="Child" min="0" max="10" value="1">
+        </div>
+        <div class="infant">
+            <label for="infant"><strong>Infant</strong></label><br>
+            <input type="number" name="infant" min="0" max="10" value="1">
+        </div>
+        <div class="">
+            <label for="currency" class="textCurrency"><strong>Currency</strong></label><br>
+                <select name="currency" class="currency">
+                    <option value="usd">USD</option>
+                    <option value="gbp">GBP</option>
+                    <option value="eur">EUR</option>
+                    <option value="thb">THB</option>
+                </select>
+        </div>
+    </div>
+    <div class="submit">
+        <input type="submit" value="SEARCH" class="">
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    background-color: rgb(29, 159, 211);
+    border-left: 1.5px solid rgb(37, 37, 37);
+    color: white;
+    text-align: center;
+    padding: 14px 18px;
+    text-decoration: none;
+}
+li a:hover:not(.active) {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+.active {
+    background-color: #ffffff;
+    color: #111;
+}
+div[class^="container"] {
+    display: flex;
+    background-color: white;
+    margin: 20px 0 0 30px;
+    width: 450px;
+
+}
+select:not(#Currency), input:not(input[type="number"]):not(input[type="submit"]) {
+    height: 2.5em;
+    width: 150px;
+    text-align: center;
+}
+.to, .returning {
+    margin-left: 35px;
+}
+input[type="number"] {
+    margin: 0 10px 0 0;
+    height: 2.5em;
+    width: 75px;
+    text-align: center;
+}
+#Currency {
+    height: 2.5em;
+    width: 75px;
+    text-align: center;
+}
+input[type="submit"] {
+    margin-top: 30px;
+    height: 2.5em;
+    width: 100px;
+    text-align: center;
+    background-color: rgb(221, 100, 1);
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+}
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a class="active" href="#Book_Flight">Book Flight</a></li>
+        <li><a href="#Schedule">Schedule</a></li>
+        <li><a href="#Ticket">Ticket</a></li>
+        <li><a href="#Hotel">Hotel</a></li>
+    </ul>
+    <form action="http://jkorpela.fi/cgi-bin/echo.cgi">
+        <div class="container">
+        <div class="from"><label for="from"><strong>Flying from</strong></label><br>
+            <select id="from" name="from">
+                <option value="Pakistan">Pakistan</option>
+                <option value="Bangkok">Bangkok</option>
+                <option value="Chiangmai">Chiangmai</option>
+                <option value="Pukhet">Pukhet</option>
+            </select>
+        </div>
+        <div class="to"><label for="to"><strong>To</strong></label><br>
+            <select id="to" name="to">
+                <option value="Chiangmai">Chiangmai</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Bangkok">Bangkok</option>
+                <option value="Pukhet">Pukhet</option>
+            </select>
+        </div>
+    </div>
+    <div class="container1">
+        <div class="departing">
+            <label for="departing"><strong>Departing</strong></label><br>
+            <input type="date" id="departing" name="departing">
+        </div>
+        <div class="returning">
+            <label for="returning"><strong>Returning</strong></label><br>
+            <input type="date" id="returning" name="returning">
+        </div>
+    </div>
+    <div class="container2">
+        <div class="Adult">
+            <label for="Adult"><strong>Adult</strong></label><br>
+            <input type="number" id="Adult" name="Adult" min="0" max="50">
+        </div>
+        <div class="Child">
+            <label for="Child"><strong>Child</strong></label><br>
+            <input type="number" id="Child" name="Child" min="0" max="50">
+        </div>
+        <div class="Child">
+            <label for="Infant"><strong>Infant</strong></label><br>
+            <input type="number" id="Infant" name="Infant" min="0" max="50">
+        </div>
+        <div class="Currency">
+            <label for="Currency" style="color: red; width: 100px;"><strong>Currency</strong></label><br>
+                <select id="Currency" name="Currency">
+                    <option value="Chiangmai">CMX</option>
+                    <option value="Pakistan">PKR</option>
+                    <option value="Bangkok">DMK</option>
+                    <option value="Pukhet">HKT</option>
+                </select>
+        </div>
+    </div>
+    <div class="container3">
+        <input type="submit" value="SEARCH">
+    </div>
+
+
+    </form>
+</body>
+</html>
